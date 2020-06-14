@@ -1,0 +1,33 @@
+body{
+	background: rgb(32,32,32);
+	color: rgb(224,224,224);
+}
+
+h1 {
+	text-decoration: underline overline;
+}
+
+h2 {
+	/* border-left: 5px double rgb(0,64,128); */
+	/* padding-left: 5px; */
+	text-shadow: 2px 2px 2px rgb(0,64,128);
+}
+
+textarea {
+	font-family: monospace;
+	background-color: rgb(0,64,128);
+	color: rgb(224,224,224);
+	border: 1px solid;
+	border-radius: 5px;
+}
+
+/* unvisited link */
+a:link {
+  color: rgb(0,128,256);
+}
+
+/* visited link */
+a:visited {
+  color: rgb(0,128,256);
+}
+
