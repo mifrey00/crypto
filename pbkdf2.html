@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>mifrey00's crypto tools - PBFK2</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css"/>
+	<link rel="icon" type="image/png" href="images/favicon.png">
+	<script type="text/javascript" src="js/sjcl.js"></script>
+	<script type="text/javascript" src="js/pbkdf2.js"></script>
+</head>
+<body>
+
+<h1>PBFK2 - Password-Based Key Derivation Function 2</h1>
+
+<p>
+For example, the input fields are pre-filled with fictive data to generate a seed according to BIP39.
+</p>
+
+<p>
+References:
+<ul>
+	<li><a href="https://en.wikipedia.org/wiki/PBKDF2">PBKDF2 on Wikipedia</a></li>
+	<li><a href="https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki">BIP39 document</a></li>
+	<li><a href="https://iancoleman.io/bip39">Ian Coleman's BIP39 Mnemonic Code Converter</a></li>
+</ul>
+</p>
+
+
+<h2>Inputs</h2>
+
+<label for="passwd">Password</label>
+<span id="passwdLen"></span>
+<br>
+<textarea id="passwd" name="passwd" cols="96" rows="2">cross zone blouse resist afraid doll goose used thing recycle news always close acoustic popular kangaroo once focus protect library process zone matrix leader</textarea>
+<br>
+<br>
+
+<label for="salt">Salt</label>
+<span id="saltLen"></span>
+<br>
+<textarea id="salt" name="salt" cols="96" rows="2">mnemonicMyPassPhrase</textarea>
+<br>
+<br>
+
+<label for="func">Hash function used in the pseudo-random function HMAC:</label>
+<select id="func" name="func">
+	<option value="sha1">SHA-1</option>
+	<option value="sha256">SHA-256</option>
+	<option value="sha512" selected="selected">SHA-512</option>
+</select>
+<br>
+<br>
+
+<label for="rounds">Rounds:</label>
+<input type="text" id="rounds" name="rounds" size="5" value="2048">
+<br>
+<br>
+
+<label for="keySize">key size:</label>
+<input type="text" id="keySize" name="keySize" size="5" value="512">
+<br>
+<br>
+
+
+<h2>Output</h2>
+
+<input type="button" id="buttonProcess" value="Process"> 
+
+<label for="hex">Hex</label>
+<span id="hexLen"></span>
+<br>
+<textarea id="hex" name="hex" cols="96" rows="2"></textarea>
+<br>
+<br>
+
+
+</body>
+</html>

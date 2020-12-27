@@ -2,84 +2,19 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>mifrey00's useless crypto tools</title>
+	<title>mifrey00's crypto tools</title>
 	<link rel="stylesheet" type="text/css" href="css/main.css"/>
 	<script type="text/javascript" src="js/sjcl.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 </head>
 <body>
 
-<h1>mifrey00's useless crypto tools</h1>
+<h1>mifrey00's crypto tools</h1>
 
-<h2>Input</h2>
-
-<label for="inputText">Input text</label>
-<span id="inputTextLen"></span>
-<br>
-<textarea id="inputText" name="inputText" cols="96" rows="2"></textarea>
-<br>
-<br>
-
-<input type="button" id="buttonProcess" value="Process"> 
-
-<h2>Hash</h2>
-
-<label for="func">Function:</label>
-<select id="func" name="func">
-	<option value="none">None</option>
-	<option value="sha1">SHA-1</option>
-	<option value="sha256">SHA-256</option>
-	<option value="sha512" selected="selected">SHA-512</option>
-</select>
-
-<label for="rounds">Rounds:</label>
-<input type="text" id="rounds" name="rounds" size="5" value="1000">
-<br>
-
-<h2>Post-processing</h2>
-
-<label for="substrEnable">Substring:</label>
-<input type="checkbox" id="substrEnable" name="substrEnable" checked="true">
-<label for="substrStart">Start [0 - ...]</label>
-<input type="text" id="substrStart" name="substrStart" size="3" value="0">
-<label for="substrLen">Length</label>
-<input type="text" id="substrLen" name="substrLen" size="3" value="20">
-<br>
-
-<h2>Output</h2>
-
-<label for="hex">Hex</label>
-<span id="hexLen"></span>
-<br>
-<textarea id="hex" name="hex" cols="96" rows="2"></textarea>
-<br>
-<br>
-
-<label for="bytes">Bytes (Decimal)</label>
-<span id="bytesLen"></span>
-<br>
-<textarea id="bytes" name="bytes" cols="96" rows="2"></textarea>
-<br>
-<br>
-
-<label for="base32">Base32</label>
-<span id="base32Len"></span>
-<br>
-<textarea id="base32" name="base32" cols="96" rows="2"></textarea>
-<br>
-<br>
-
-<label for="base64">Base64</label>
-<span id="base64Len"></span>
-<br>
-<textarea id="base64" name="base64" cols="96" rows="2"></textarea>
-<br>
-<br>
-
-<p>
-Check <a href="https://www.grc.com/haystack.htm">GRC's Interactive Brute Force Password “Search Space” Calculator</a> to calculate the time required to exhaustively search a password's space.
-</P>
-
+<ul>
+	<li><a href="string_hash.html">String Hash</a></li>
+	<li><a href="pbkdf2.html">PBKDF2</a></li>
+</ul>
 
 
 </body>

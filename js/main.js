@@ -60,7 +60,7 @@ function process() {
 	bitsPerChar = hex.value.length * 4;
 	digitPerChar = bitsPerChar * Math.log10(2);
 	yearsSearch = Math.pow(10, digitPerChar-Math.log10(guessesPerSec)) / (3600*24*365);
-	hexLen.innerHTML = sep + hex.value.length + " characters" + sep + bitsPerChar + " bits" + sep + "Space size = 2^" + bitsPerChar + " = 10^" + digitPerChar.toFixed(1) + sep + "Brute force: " + yearsSearch.toFixed(1) +" years of exhausting search at 10^" + Math.log10(guessesPerSec) + " guesses/s";
+	hexLen.innerHTML = sep + hex.value.length + " characters" + sep + bitsPerChar + " bits" + sep + "Space size = 2^" + bitsPerChar + " = 10^" + digitPerChar.toFixed(1) + sep + "Brute force: " + yearsSearch.toPrecision(2) +" years of exhaustive search at 10^" + Math.log10(guessesPerSec) + " guesses/s";
 	
 	bytes.value = sjcl.codec.bytes.fromBits(sjcl.codec.hex.toBits(hex.value));
 	bytesLen.innerHTML = sep + Math.ceil(hex.value.length/2) + " bytes";
@@ -69,13 +69,13 @@ function process() {
 	bitsPerChar =  base32.value.length * 5;
 	digitPerChar = bitsPerChar * Math.log10(2);
 	yearsSearch = Math.pow(10, digitPerChar-Math.log10(guessesPerSec)) / (3600*24*365);
-	base32Len.innerHTML = sep + base32.value.length + " characters" + sep + bitsPerChar + " bits" + sep + "Space size = 2^" + bitsPerChar + " = 10^" + digitPerChar.toFixed(1) + sep + "Brute force: " + yearsSearch.toFixed(1) +" years of exhausting search at 10^" + Math.log10(guessesPerSec) + " guesses/s";
+	base32Len.innerHTML = sep + base32.value.length + " characters" + sep + bitsPerChar + " bits" + sep + "Space size = 2^" + bitsPerChar + " = 10^" + digitPerChar.toFixed(1) + sep + "Brute force: " + yearsSearch.toPrecision(2) +" years of exhaustive search at 10^" + Math.log10(guessesPerSec) + " guesses/s";
 	
 	base64.value = transform(sjcl.codec.base64.fromBits(bits, true));
 	bitsPerChar = base64.value.length * 6;
 	digitPerChar = bitsPerChar * Math.log10(2);
 	yearsSearch = Math.pow(10, digitPerChar-Math.log10(guessesPerSec)) / (3600*24*365);
-	base64Len.innerHTML = sep + base64.value.length + " characters" + sep + bitsPerChar + " bits" + sep + "Space size = 2^" + bitsPerChar + " = 10^" + digitPerChar.toFixed(1) + sep + "Brute force: " + yearsSearch.toFixed(1) +" years of exhausting search at 10^" + Math.log10(guessesPerSec) + " guesses/s";
+	base64Len.innerHTML = sep + base64.value.length + " characters" + sep + bitsPerChar + " bits" + sep + "Space size = 2^" + bitsPerChar + " = 10^" + digitPerChar.toFixed(1) + sep + "Brute force: " + yearsSearch.toPrecision(2) +" years of exhaustive search at 10^" + Math.log10(guessesPerSec) + " guesses/s";
 }
 
 function clearData() {
