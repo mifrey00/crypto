@@ -56,7 +56,7 @@ function process() {
 	bitsPerChar = hex.value.length * 4;
 	digitPerChar = bitsPerChar * Math.log10(2);
 	yearsSearch = Math.pow(10, digitPerChar-Math.log10(guessesPerSec)) / (3600*24*365);
-	hexLen.innerHTML = sep + hex.value.length + " characters" + sep + bitsPerChar + " bits" + sep + "Space size = 2^" + bitsPerChar + " = 10^" + digitPerChar.toFixed(1) + sep + "Brute force: " + yearsSearch.toFixed(1) +" years of exhausting search at 10^" + Math.log10(guessesPerSec) + " guesses/s";
+	hexLen.innerHTML = sep + hex.value.length + " characters" + sep + bitsPerChar + " bits" + sep + "Space size = 2^" + bitsPerChar + " = 10^" + digitPerChar.toFixed(1) + sep + "Brute force: " + yearsSearch.toPrecision(2) +" years of exhausting search at 10^" + Math.log10(guessesPerSec) + " guesses/s";
 }
 
 function clearData() {
